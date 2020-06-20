@@ -20,6 +20,8 @@ gem 'webpacker', '~> 5.1.1'
 gem 'devise'
 gem 'devise-i18n'
 gem 'russian'
+gem 'carrierwave'
+gem 'rmagick'
 gem 'twitter-bootstrap-rails'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
