@@ -53,14 +53,35 @@ ru:
       created: 'Вы добавили фотографию к событию'
       destroyed: 'Вы удалили фотографию'
 
+  actionmailer:
+    mailers:
+      event_mailer:
+        subscription: 'Новая подписка на'
+        comment: 'Новый комментарий'
+
   app:
     name: 'Шашлыки'
     company: 'Хороший программист'
 
   comments:
     comment:
-    destroy_confirm: 'Вы уверены, что хотите удалить этот комментарий?'
+      destroy_confirm: 'Вы уверены, что хотите удалить этот комментарий?'
 
   subscriptions:
     subscription:
       destroy_confirm: 'Вы уверены, что хотите удалить эту подписку?'
+
+  event_mailer:
+    comment:
+      title: 'Новый комментарий'
+      author: 'Автор'
+      event: 'Событие'
+      datetime: 'Состоится'
+      owner: 'Организатор'
+    subscription:
+      title: 'Новая подписка'
+      name: 'Имя'
+      email: 'Email'
+      event: 'Событие'
+      datetime: 'Состоится'
+      owner: 'Организатор'
