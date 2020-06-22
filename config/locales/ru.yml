@@ -87,3 +87,10 @@ ru:
       event: 'Событие'
       datetime: 'Состоится'
       owner: 'Организатор'
+
+  views:
+    interaction:
+      edit: 'Изменить'
+      delete: 'Удалить'
+    question:
+      are_you_sure: 'Вы уверены?'
