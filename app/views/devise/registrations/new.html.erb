@@ -1,31 +1,30 @@
 <h2><%= t('.sign_up') %></h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
-
-  <div class="field">
+  <%= render partial: 'partials/form_errors', locals: {model: @user} %>
+  <div class="field buffer-both">
     <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: t('activerecord.attributes.user.email')%>
     <%= octicon "mail", height: 16 %>
   </div>
 
-  <div class="field">
+  <div class="field buffer-both">
     <%= f.text_field :name, autocomplete: "name", placeholder: t('activerecord.attributes.user.name')%>
     <%= octicon "person", height: 16 %>
   </div>
 
-  <div class="field">
+  <div class="field buffer-both">
     <%= f.password_field :password, autocomplete: "new-password", placeholder: t('activerecord.attributes.user.password') %>
     <%= octicon "lock", height: 16 %>
   </div>
 
-  <div class="field">
+  <div class="field buffer-both">
     <%= f.password_field :password_confirmation, autocomplete: "new-password",
                          placeholder: t('activerecord.attributes.user.password_confirmation') %>
     <%= octicon "lock", height: 16 %>
   </div>
 
-  <div class="actions">
-    <%= f.submit t('.sign_up') %>
+  <div class="actions buffer-both">
+    <%= f.submit t('.sign_up'), class: "btn btn-primary btn-sm" %>
   </div>
 <% end %>
 
