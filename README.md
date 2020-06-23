@@ -1,24 +1,33 @@
-# README
+## BBQ
+BBQ is your event managing app.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Create, take a look at other users events, subscribe and comment.
+<br>
 
-Things you may want to cover:
+### Heroku
+-   [Click me](https://bbq-yurifaraf.herokuapp.com/)
 
-* Ruby version
+### Installation
+-   Cloning a repository
+```
+git clone git@github.com:YuriFaraf/bbq.git
+```
 
-* System dependencies
+###  Usage
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+1.  Bundle
+```
+    bundle install
+```
+2.  Migrations
+```
+    rake db:create db:migrate
+```
+3.  Run rails server locally by
+```
+    rails s
+```
+4.  Open your browser and type in
+```
+    localhost:3000
+```
