@@ -3,10 +3,7 @@
 <% if errors.any? %>
   <div class="alert alert-danger">
     <div class="lead buffer-bottom">
-      <%= I18n.t("errors.messages.not_saved",
-                 count: errors.count,
-                 resource: model.class.model_name.human)
-      %>
+      <%= t("errors.messages.not_saved", count: errors.count, resource: model.class.model_name.human) %>
     </div>
 
     <ul>
