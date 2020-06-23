@@ -53,3 +53,7 @@
 .thumbnail-inner {
     padding: 20px 4px 4px;
 }
+
+.field_with_errors {
+    display: inline-block;
+}
