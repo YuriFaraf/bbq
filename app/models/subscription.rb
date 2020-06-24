@@ -9,7 +9,7 @@ class Subscription < ApplicationRecord
 
   validates :user, uniqueness: {scope: :event_id}, if: -> { user.present? }
   validates :user_email, uniqueness: {scope: :event_id}, unless: -> { user.present? }
-  validates :user_email, exclusion: { in: User.all.to_a.map(&:email)}, on: :create, unless: -> { user.present? }
+  validates :user_email, exclusion: { in: User.pluck(:email)}, on: :create, unless: -> { user.present? }
 
   def user_name
     if user.present?
