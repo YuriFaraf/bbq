@@ -8,8 +8,7 @@
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag "application", :media => "all" %>
-
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=024edbdf-bccc-4e1f-bf8b-938a152dc169&lang=ru_RU" type="text/javascript"></script>
+    <%= yield :local_js %>
 
     <!-- For third-generation iPad with high-resolution Retina display: -->
     <!-- Size should be 144 x 144 pixels -->

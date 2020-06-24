@@ -15,7 +15,3 @@ require('jquery')
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
-
-// import 'bootstrap'
-import './map'
-// import 'https://api-maps.yandex.ru/2.1/?lang=ru_RU'
