@@ -61,6 +61,7 @@ ru:
       event_mailer:
         subscription: 'Новая подписка на'
         comment: 'Новый комментарий'
+        photo: 'Новая фотография'
 
   app:
     name: 'Шашлыки'
@@ -77,6 +78,12 @@ ru:
   event_mailer:
     comment:
       title: 'Новый комментарий'
+      author: 'Автор'
+      event: 'Событие'
+      datetime: 'Состоится'
+      owner: 'Организатор'
+    photo:
+      title: 'Новая фотография'
       author: 'Автор'
       event: 'Событие'
       datetime: 'Состоится'
