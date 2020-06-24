@@ -4,20 +4,26 @@
   <%= render "devise/shared/error_messages", resource: resource %>
   <%= f.hidden_field :reset_password_token %>
 
-  <div class="field">
+  <div class="field buffer-both">
     <%= f.label :password, t('.new_password') %><br />
     <% if @minimum_password_length %>
       <em><%= t('devise.shared.minimum_password_length', count: @minimum_password_length) %></em><br />
     <% end %>
-    <%= f.password_field :password, autofocus: true, autocomplete: "new-password" %>
+    <%= f.password_field :password, autocomplete: "new-password",
+                         placeholder: t('activerecord.attributes.user.password'),
+                         class: 'castom-input form-control' %>
+    <%= octicon "lock", height: 16 %>
   </div>
 
-  <div class="field">
+  <div class="field buffer-both">
     <%= f.label :password_confirmation, t('.confirm_new_password') %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+    <%= f.password_field :password_confirmation, autocomplete: "new-password",
+                         placeholder: t('activerecord.attributes.user.password_confirmation'),
+                         class: 'castom-input form-control' %>
+    <%= octicon "lock", height: 16 %>
   </div>
 
-  <div class="actions">
+  <div class="actions buffer-both">
     <%= f.submit t('.change_my_password') %>
   </div>
 <% end %>

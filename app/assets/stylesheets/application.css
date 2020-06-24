@@ -57,3 +57,8 @@
 .field_with_errors {
     display: inline-block;
 }
+
+.castom-input {
+    display: inline-block;
+    width: 300px;
+}

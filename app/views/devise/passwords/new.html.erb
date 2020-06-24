@@ -3,12 +3,14 @@
 <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  <div class="field buffer-both">
+    <%= f.email_field :email, autofocus: true, autocomplete: "email",
+                      placeholder: t('activerecord.attributes.user.email'),
+                      class: 'castom-input form-control'%>
+    <%= octicon "mail", height: 16 %>
   </div>
 
-  <div class="actions">
+  <div class="actions buffer-both">
     <%= f.submit t('.send_me_reset_password_instructions') %>
   </div>
 <% end %>
