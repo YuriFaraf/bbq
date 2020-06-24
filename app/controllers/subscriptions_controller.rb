@@ -6,12 +6,8 @@ class SubscriptionsController < ApplicationController
     @new_subscription = @event.subscriptions.build(subscription_params)
     @new_subscription.user = current_user
 
-    if User.where(email: @new_subscription.user_email).count > 0
-      redirect_to @event, alert: I18n.t('controllers.subscriptions.existed_user') and return
-    end
-
     if @new_subscription.save
-      EventMailer.subscription(@event, @new_subscription).deliver_now
+      # EventMailer.subscription(@event, @new_subscription).deliver_now
       redirect_to @event, notice: I18n.t('controllers.subscriptions.created')
     else
       render 'events/show', alert: I18n.t('controllers.subscriptions.error')
