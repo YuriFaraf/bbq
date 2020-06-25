@@ -15,3 +15,6 @@ require('jquery')
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+
+// https://lcweb.it/lc-lightbox/documentation
+import './lc_lightbox.lite'

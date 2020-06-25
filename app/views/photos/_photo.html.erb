@@ -1,5 +1,5 @@
 <div class="event-photo buffer-both">
-  <%= link_to image_tag(photo.photo.thumb.url), photo.photo.url %>
+  <% image_author = "Добавил #{render partial: 'users/user', object: photo.user}" %>
 
-  Добавил <%= render partial: 'users/user', object: photo.user %>
+  <%= link_to image_tag(photo.photo.thumb.url), photo.photo.url, class: "lbox_photo", data: {title: image_author} %>
 </div>
