@@ -2,32 +2,32 @@
   <%= render partial: 'partials/form_errors', locals: {model: @event} %>
 
   <div class="form-group">
-    <%= f.label :title %>
+    <%= f.label :title %><br />
     <%= f.text_field :title, class: 'form-control' %>
   </div>
 
   <div class="form-group">
-    <%= f.label :address %>
+    <%= f.label :address %><br />
     <%= f.text_field :address, class: 'form-control' %>
   </div>
 
   <div class="form-group">
-    <%= f.label :datetime %>
+    <%= f.label :datetime %><br />
     <p><%= f.datetime_select :datetime, class: 'form-control' %></p>
   </div>
 
   <div class="form-group">
-    <%= f.label :description %>
+    <%= f.label :description %><br />
     <%= f.text_area :description, class: 'form-control' %>
   </div>
 
   <div class="form-group">
-    <%= f.label :pincode %>
+    <%= f.label :pincode %><br />
     <%= f.text_field :pincode, class: 'form-control' %>
   </div>
 
   <div class="actions">
-    <%= f.submit 'Сохранить', class: 'btn btn-primary' %>
+    <%= f.submit 'Сохранить', class: 'btn btn-primary btn-sm' %>
     или <%= link_to 'вернуться', :back %>
   </div>
 <% end %>

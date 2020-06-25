@@ -6,17 +6,6 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
-  def edit
-  end
-
-  def update
-    if @user.update(user_params)
-      redirect_to @user, notice: I18n.t('controllers.users.updated')
-    else
-      render :edit
-    end
-  end
-
   private
 
     def set_current_user
