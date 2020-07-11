@@ -111,7 +111,7 @@ Rails.application.configure do
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
 
   # Базовый URL сайта для правильных ссылок в письмах
-  config.action_mailer.default_url_options = {host: 'bbq-yurifaraf.herokuapp.com'}
+  config.action_mailer.default_url_options = {host: '134.209.93.29'}
 
   # Ошибки рассылки юзеру не показываем
   config.action_mailer.raise_delivery_errors = false
@@ -123,13 +123,23 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :smtp
 
   # А это для SendGrid
-  ActionMailer::Base.smtp_settings = {
-    :address        => 'smtp.sendgrid.net',
-    :port           => '587',
-    :authentication => :plain,
-    :user_name      => ENV['SENDGRID_USERNAME'],
-    :password       => ENV['SENDGRID_PASSWORD'],
-    :domain         => 'heroku.com',
-    :enable_starttls_auto => true
+  # ActionMailer::Base.smtp_settings = {
+  #   :address        => 'smtp.sendgrid.net',
+  #   :port           => '587',
+  #   :authentication => :plain,
+  #   :user_name      => ENV['SENDGRID_USERNAME'],
+  #   :password       => ENV['SENDGRID_PASSWORD'],
+  #   :domain         => 'heroku.com',
+  #   :enable_starttls_auto => true
+  # }
+
+  # А это для VPS
+  config.action_mailer.smtp_settings = {
+      address: 'smtp.gmail.com',
+      port: '587',
+      user_name: Rails.application.credentials.dev_mailer_login,
+      password: Rails.application.credentials.dev_mailer_pass,
+      authentication: 'plain',
+      enable_starttls_auto: true
   }
 end

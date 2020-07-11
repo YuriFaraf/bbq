@@ -22,7 +22,8 @@ gem 'devise-i18n'
 gem 'rails-i18n'
 gem 'carrierwave'
 gem 'rmagick'
-gem 'fog-aws'
+# для загрузки фото на амазон
+# gem 'fog-aws'
 gem 'twitter-bootstrap-rails'
 # https://primer.style/octicons/
 gem 'octicons_helper'
