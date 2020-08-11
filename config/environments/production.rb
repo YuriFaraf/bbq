@@ -111,7 +111,7 @@ Rails.application.configure do
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
 
   # Базовый URL сайта для правильных ссылок в письмах
-  config.action_mailer.default_url_options = {host: '134.209.93.29'}
+  config.action_mailer.default_url_options = {host: 'bbq-faraf.site'}
 
   # Ошибки рассылки юзеру не показываем
   config.action_mailer.raise_delivery_errors = false
@@ -133,13 +133,14 @@ Rails.application.configure do
   #   :enable_starttls_auto => true
   # }
 
-  # А это для VPS
-  config.action_mailer.smtp_settings = {
-      address: 'smtp.gmail.com',
-      port: '587',
-      user_name: Rails.application.credentials.dev_mailer_login,
-      password: Rails.application.credentials.dev_mailer_pass,
-      authentication: 'plain',
-      enable_starttls_auto: true
+  # А это для SendGrid на VPS
+  ActionMailer::Base.smtp_settings = {
+    :address        => 'smtp.sendgrid.net',
+    :port           => '587',
+    :authentication => :plain,
+    :user_name      => Rails.application.credentials.prod_mailer_login,
+    :password       => Rails.application.credentials.prod_mailer_pass,
+    :domain         => 'bbq-faraf.site',
+    :enable_starttls_auto => true
   }
 end
